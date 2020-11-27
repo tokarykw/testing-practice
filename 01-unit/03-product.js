@@ -31,16 +31,21 @@ try {
   // Test Case 3
   // --------------------------------------------------
   // It should ignore additional numbers.
+  var result = product(2, 3, 6, 8, 9);
+  if (result !== 6) throw new Error('Expected product(2, 3) to be 6. Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 4
   // --------------------------------------------------
   // When invoked with only 1 number, it should return that number.
+  var result = product(5, 1);
+  if (result !== 5) throw new Error('Expected product(5) to be 5. Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 5
   // --------------------------------------------------
   // When invoked with no numbers, it should return 0.
+  
 
   console.log('All tests passed successfully.');
 
