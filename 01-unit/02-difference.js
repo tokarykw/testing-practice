@@ -1,8 +1,12 @@
 // ==================================================
 // DEFINE FUNCTION(S)
 // ==================================================
-function difference () {
- 
+function difference (num1, num2) {
+  if (num1 === undefined) num1 = 0;
+  if (num2 === undefined) num2 = 0;
+  
+  var $result= num1-num2
+  return $result
 }
 
 
@@ -21,6 +25,8 @@ try {
   // Test Case 2
   // --------------------------------------------------
   // It should ignore additional numbers.
+  var result = difference(1, 1, 2, 2, 5);
+  if (result !== 0) throw new Error('Expected sum(1, 1, 2, 2, 5) to be 0. Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 3
