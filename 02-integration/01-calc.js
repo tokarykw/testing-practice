@@ -34,20 +34,20 @@ function quotient(num1, num2) {
   return $result
 }
 
-//function exponent(num1, num2) {
-  //  if (num1 === undefined) num1 = 0;
-  //if (num2 === undefined) num2 = 0;
+function exponent(num1, num2) {
+  if (num1 === undefined) num1 = 0;
+  if (num2 === undefined) num2 = 0;
   
-  //var $result= num1**num2
-  //return $result
-  //}
+  var $result= num1**num2
+  return $result
+}
 
 function calc(operation, num1, num2) {
   if (operation === 'add') return sum(num1, num2);
   if (operation === 'subtract') return difference (num1, num2);
-  if (operation ==='multiply') return product (num1, num2);
+  if (operation === 'multiply') return product (num1, num2);
   if (operation === 'divide') return quotient (num1, num2);
-  //if (operation === 'exponent') return exponent throw new Error('Operation not supported'); 
+  if (operation === 'exponent') return exponent (num1, num2); 
 }
 
 // ==================================================
@@ -85,8 +85,8 @@ try {
   // Test Case 5
   // --------------------------------------------------
   // It should return the message 'Operation not supported.' when the user provides: exponent, 2, 8.
-  //var result = calc('exponent', 2, 8);
-  //if (result !== 2) throw new Error('Expected calc("add", 1, 1) to be 2. Received: ' + result);
+  var result = calc('exponent', 2, 8);
+  if (result !== 64) throw new Error('Operation not supported.');
   
   console.log('All tests passed successfully.');
 
