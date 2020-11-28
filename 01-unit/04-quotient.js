@@ -24,7 +24,9 @@ try {
   // Test Case 2
   // --------------------------------------------------
   // It should return the text 'ERROR' when the second number is 0.
-  
+  var result = quotient(8, 0);
+  if (result === undefined) 
+  if (result !== undefined) throw new Error('Expected quotient(undefined). Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 3
@@ -44,7 +46,9 @@ try {
   // Test Case 5
   // --------------------------------------------------
   // When invoked with no numbers, it should return 0.
-
+  var result = quotient();
+  if (result === undefined)
+  if (result !== 0) throw new Error('Expected quotient(undefined) to be 0. Received: ' + result);
 
 
   console.log('All tests passed successfully.');
