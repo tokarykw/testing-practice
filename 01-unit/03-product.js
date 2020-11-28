@@ -1,7 +1,7 @@
 // ==================================================
 // DEFINE FUNCTION(S)
 // ==================================================
-function product(num1, num2) {
+function product (num1, num2) {
   if (num1 === undefined) num1 = 0;
   if (num2 === undefined) num2 = 0;
   
@@ -32,7 +32,7 @@ try {
   // --------------------------------------------------
   // It should ignore additional numbers.
   var result = product(2, 3, 6, 8, 9);
-  if (result !== 6) throw new Error('Expected product(2, 3) to be 6. Received: ' + result);
+  if (result !== 6) throw new Error('Expected product(2, 3, 6, 8, 9) to be 6. Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 4

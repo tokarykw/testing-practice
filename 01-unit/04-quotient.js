@@ -1,7 +1,7 @@
 // ==================================================
 // DEFINE FUNCTION(S)
 // ==================================================
-function quotient(num1,num2) {
+function quotient (num1, num2) {
   if (num1 === undefined) num1 = 0;
   if (num2 === undefined) num2 = 0;
   
@@ -33,14 +33,14 @@ try {
   // --------------------------------------------------
   // It should ignore additional numbers.
   var result = quotient(6, 3, 7, 8, 9);
-  if (result !== 2) throw new Error('Expected quotient(6, 3) to be 2. Received: ' + result);
+  if (result !== 2) throw new Error('Expected quotient(6, 3, 7, 8, 9) to be 2. Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 4
   // --------------------------------------------------
   // When invoked with only 1 number, it should return that number.
   var result = quotient(5, 1);
-  if (result !== 5) throw new Error('Expected quotient(5) to be 5. Received: ' + result);
+  if (result !== 5) throw new Error('Expected quotient(5, 1) to be 5. Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 5
@@ -48,7 +48,7 @@ try {
   // When invoked with no numbers, it should return 0.
   var result = quotient();
   if (result === undefined)
-  if (result !== 0) throw new Error('Expected quotient(undefined) to be 0. Received: ' + result);
+  if (result !== 0) throw new Error('Expected quotient() to be 0. Received: ' + result);
 
 
   console.log('All tests passed successfully.');

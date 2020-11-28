@@ -1,16 +1,12 @@
 // ==================================================
 // DEFINE FUNCTION(S)
 // ==================================================
-function sum (num1,num2){
+function sum (num1, num2){
   if (num1 === undefined) num1 = 0;
   if (num2 === undefined) num2 = 0;
   
   var $result= num1+num2
   return $result
-}
-
-function difference() {
-  
 }
 
 // ==================================================
