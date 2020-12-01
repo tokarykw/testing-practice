@@ -3,8 +3,10 @@
 // ==================================================
 function quotient (num1, num2) {
   if (num1 === undefined) num1 = 0;
-  if (num2 === undefined) num2 = 0;
-  
+  if (num2 === undefined) num2 = 1;
+ 
+  if (num2 === 0) return 'ERROR'
+
   var $result= num1/num2
   return $result
 }
@@ -25,9 +27,10 @@ try {
   // --------------------------------------------------
   // It should return the text 'ERROR' when the second number is 0.
   var result = quotient(8, 0);
-  if (result === undefined) 
-  if (result !== undefined) throw new Error('Expected quotient(undefined). Received: ' + result);
-
+  //if (result === undefined) {
+    if (result !== 'ERROR') throw new Error('Expected quotient 8, 0 to be ERROR. Received: ' + result);
+  //}
+  
   // --------------------------------------------------
   // Test Case 3
   // --------------------------------------------------
@@ -39,15 +42,14 @@ try {
   // Test Case 4
   // --------------------------------------------------
   // When invoked with only 1 number, it should return that number.
-  var result = quotient(5, 1);
-  if (result !== 5) throw new Error('Expected quotient(5, 1) to be 5. Received: ' + result);
+  var result = quotient(5);
+  if (result !== 5) throw new Error('Expected quotient(5) to be 5. Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 5
   // --------------------------------------------------
   // When invoked with no numbers, it should return 0.
   var result = quotient();
-  if (result === undefined)
   if (result !== 0) throw new Error('Expected quotient() to be 0. Received: ' + result);
 
 
