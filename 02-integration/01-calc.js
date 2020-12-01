@@ -86,7 +86,7 @@ try {
   // --------------------------------------------------
   // It should return the message 'Operation not supported.' when the user provides: exponent, 2, 8.
   var result = calc('exponent', 2, 8);
-  if (result !== 64) throw new Error('Operation not supported.');
+  if (result === 'exponent') return ('Operation not supported.');
   
   console.log('All tests passed successfully.');
 
